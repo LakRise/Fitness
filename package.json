@@ -1,8 +1,8 @@
 {
-  "name": "Liga-A-accelerator-template",
+  "name": "Fitness",
   "version": "2.0.0",
   "type": "module",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "description": "Омск фитнес центр",
   "browserslist": [
     "last 3 versions",
     "IE 11",
