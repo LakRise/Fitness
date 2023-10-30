@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Fitness" content="Описание проекта">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Supergym - фитнес центр в Омске.">
     <title>Fitness</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
-      <header class="page-header" style="background-color: aqua;">
-        <div class="container">
-          <a class="page-header__logo" href="index.html">
-            <img src="img/svg/logo.svg" width="120" height="23" alt="Логотип фитнес центра Supergym.">
+      <header class="page-header">
+        <div class="page-header__container container">
+          <a class="page-header__logo" href="#">
+            <picture>
+              <source type="img/svg+xml" media="(max-width: 1365px)" srcset="img/svg/header-logo-tablet.svg">
+              <source type="img/svg+xml" media="(max-width: 767px)" srcset="img/svg/header-logo-mobile.svg">
+              <img src="img/svg/header-logo-desktop.svg" width="120" height="26" alt="Логотип фитнес центра Supergym.">
+            </picture>
           </a>
           <a class="page-header__link" href="88005555555">
             <span class="page-header__text">8-800-555-55-55</span>
@@ -24,24 +28,30 @@
         <h1 class="visually-hidden">Фитнес центр Supergym</h1>
        <section class="hero">
         <div class="container">
-          <div class="hero__content-wrapper">
-            <p class="hero__badge">ОМСК</p>
-            <h2 class="hero__title">Фитнес центр</h2>
-            <p class="hero__text">Тренажёрный зал Групповые занятия Кардио-зона</p>
-            <a class="hero__button button" href="#">
-              <span class="button__text">Купить абонемент</span>
-            </a>
+          <div class="hero__wrapper">
+            <div class="hero__content-wrapper">
+              <h2 class="hero__title">
+                <span class="hero__title-displaced">Фитнес</span><br>центр
+              </h2>
+              <p class="hero__badge">ОМСК</p>
+              <p class="hero__text">Тренажёрный зал<br>Групповые занятия<br>Кардио-зона</p>
+              <a class="hero__button btn btn--dark-background" href="#">
+                <span class="hero__button-text btn__text">Купить абонемент</span>
+              </a>
+            </div>
+            <div class="hero__picture-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 1365px)" srcset="img/hero-tablet-1x.webp 1x,
+                img/hero-tablet-2x.webp 2x">
+                <source type="image/webp" srcset="img/hero-desktop-1x.webp 1x,
+                img/hero-desktop-2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 1365px)" srcset="img/hero-tablet-1x.jpg 1x,
+                img/hero-tablet-2x.jpg 2x">
+                <img src="img/hero-desktop-1x.jpg" srcset="img/hero-desktop-2x.jpg 2x" width="500" height="524"
+                alt="клиент Supergym.">
+              </picture>
+            </div>
           </div>
-          <picture>
-            <source type="image/webp" media="(max-width: 1365px)" srcset="img/hero-tablet-1x.webp 1x,
-            img/hero-tablet-2x.webp 2x">
-            <source type="image/webp" srcset="img/hero-desktop-1x.webp 1x,
-            img/hero-desktop-2x.webp 2x">
-            <source type="image/jpg" media="(max-width: 1365px)" srcset="img/hero-tablet-1x.jpg 1x,
-            img/hero-tablet-2x.jpg 2x">
-            <img src="img/hero-desktop-1x.jpg" srcset="img/hero-desktop-2x.jpg 2x" width="500" height="524"
-            alt="клиент Supergym.">
-            </picture>
         </div>
        </section>
        <section class="promo">

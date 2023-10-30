@@ -1,18 +1,8 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
+  border: 2px solid $color-default-blue;
   cursor: pointer;
-
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
+  transition: all 0.2s ease;
 
   &:disabled {
     opacity: 0.5;
@@ -20,7 +10,41 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  &--dark-background {
+    border-color: $color-default-white;
+    color: $color-default-white;
+
+    @include hover-focus {
+      background-color: $color-default-white;
+      color: #103aae;
+    }
+
+    &:active {
+      background-color: $color-default-white;
+      color: $color-default-blue;
+    }
+
+    &:active:hover:focus {
+      color: $color-default-blue;
+    }
+  }
+}
+
+.btn__text {
+  font-family: $ff-placeholder;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.6px;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+
+  @media (max-width: $vp-1365) {
+    font-weight: 400;
+  }
+
+  @media (max-width: $vp-767) {
+    font-weight: 700;
   }
 }
