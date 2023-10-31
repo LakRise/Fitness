@@ -14,8 +14,8 @@
         <div class="page-header__container container">
           <a class="page-header__logo" href="#">
             <picture>
-              <source type="img/svg+xml" media="(max-width: 1365px)" srcset="img/svg/header-logo-tablet.svg">
               <source type="img/svg+xml" media="(max-width: 767px)" srcset="img/svg/header-logo-mobile.svg">
+              <source type="img/svg+xml" media="(max-width: 1365px)" srcset="img/svg/header-logo-tablet.svg">
               <img src="img/svg/header-logo-desktop.svg" width="120" height="26" alt="Логотип фитнес центра Supergym.">
             </picture>
           </a>
@@ -55,31 +55,50 @@
         </div>
        </section>
        <section class="promo">
-        <div class="container">
-          <h2 class="promo__title">Тренажерный зал</h2>
-          <p class="promo__badge">Просторный зал площадью 900 кв/м</p>
-          <p class="promo__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал
-          оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
-          <p class="promo__text promo__text--desktop-only">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько
-          оборудованных залов для различных видов групповых занятий.</p>
-          <div class="promo__wrapper">
+        <div class="promo__container container">
+          <div class="promo__text-wrapper">
+            <h2 class="promo__title">Тренажерный зал</h2>
+            <p class="promo__badge">Просторный зал площадью 900 кв/м</p>
+            <p class="promo__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал
+            оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+            <p class="promo__text promo__text--desktop-only">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько
+            оборудованных залов для различных видов групповых занятий.</p>
+          </div>
+          <div class="promo__images-wrapper">
             <picture>
-              <source type="image/webp" media="(max-width: 1365px)" srcset="img/promo-gym-tablet-1x.webp 1x,
-              img/promo-gym-tablet-2x.webp 2x">
               <source type="image/webp" media="(max-width: 767px)" srcset="img/promo-gym-mobile-1x.webp 1x,
               img/promo-gym-mobile-2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/promo-gym-tablet-1x.webp 1x,
+              img/promo-gym-tablet-2x.webp 2x">
               <source type="image/webp" srcset="img/promo-gym-desktop-1x.webp 1x,
               img/promo-gym-desktop-2x.webp 2x">
-              <source type="image/jpg" media="(max-width: 1365px)" srcset="img/promo-gym-tablet-1x.jpg 1x,
-              img/promo-gym-tablet-2x.jpg 2x">
               <source type="image/jpg" media="(max-width: 767px)" srcset="img/promo-gym-mobile-1x.jpg 1x,
               img/promo-gym-mobile-2x.jpg 2x">
+              <source type="image/jpg" media="(max-width: 1365px)" srcset="img/promo-gym-tablet-1x.jpg 1x,
+              img/promo-gym-tablet-2x.jpg 2x">
               <img src="img/promo-gym-desktop-1x.jpg" srcset="img/promo-gym-desktop-2x.jpg 2x" width="660" height="401"
               alt="тренажерный зал.">
             </picture>
             <div class="promo__video-container">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/video-overlay-mobile-1x.webp 1x,
+                img/video-overlay-mobile-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1365px)" srcset="img/video-overlay-tablet-1x.webp 1x,
+                img/video-overlay-tablet-2x.webp 2x">
+                <source type="image/webp" srcset="img/video-overlay-desktop-1x.webp 1x,
+                img/video-overlay-desktop-2x.webp 2x">
+                <source type="image/png" media="(max-width: 767px)" srcset="img/video-overlay-mobile-1x.png 1x,
+                img/video-overlay-mobile-2x.png 2x">
+                <source type="image/png" media="(max-width: 1365px)" srcset="img/video-overlay-tablet-1x.png 1x,
+                img/video-overlay-tablet-2x.png 2x">
+                <img src="img/video-overlay-desktop-1x.png" srcset="img/video-overlay-desktop-2x.png 2x" width="364" height="228"
+                alt="">
+              </picture>
               <iframe class="promo__video" src="https://www.youtube.com/embed/9TZXsZItgdw" width="364" height="228"></iframe>
-              <a class="promo__video-button" href="#">
+              <button class="promo__video-button" type="button">
+                <svg aria-hidden="true" focusable="false" width="13" height="15" fill="currentColor">
+                  <use href="img/sprite.svg#play"></use>
+                </svg>
                 <span class="visually-hidden">Запустить видео</span>
               </a>
             </div>

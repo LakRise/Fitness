@@ -19,7 +19,7 @@
   transform: translateY(1px);
   margin: 0 205px 0 0;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr auto;
   column-gap: 70px;
   row-gap: 40px;
 
@@ -57,8 +57,6 @@
 }
 
 .hero__picture-wrapper {
-  transform: translateX(1px);
-
   @media (max-width: variables.$vp-1365) {
     transform: translate(0);
   }
@@ -78,7 +76,7 @@
 }
 
 .hero__badge {
-  transform: translate(1px, 1px);
+  transform: translateY(1px);
   margin: 0 0 12px;
   padding: 0;
   grid-column: 2;
@@ -109,7 +107,6 @@
 }
 
 .hero__title {
-  transform: translateX(1px);
   margin: 0 0 49px;
   padding: 0;
   grid-column: 2;
@@ -123,7 +120,6 @@
   text-transform: uppercase;
 
   @media (max-width: variables.$vp-1365) {
-    transform: translate(0);
     margin-bottom: 50px;
     max-width: 98%;
     font-size: 72px;
@@ -147,11 +143,12 @@
 }
 
 .hero__text {
-  transform: translate(-1px, 2px);
+  transform: translate(0, 2px);
   margin: auto 0;
   padding: 0;
   grid-column: 1;
   grid-row: 2;
+  justify-self: start;
   max-width: 113px;
   font-weight: 400;
   font-size: 14px;
@@ -170,7 +167,6 @@
 }
 
 .hero__button {
-  transform: translateX(1px);
   padding: 25px 54px;
   width: 230px;
   grid-column: 2;
@@ -178,7 +174,6 @@
   align-items: center;
 
   @media (max-width: variables.$vp-1365) {
-    transform: translate(0);
     padding: 20px 32px;
     min-width: 185px;
     width: 100%;

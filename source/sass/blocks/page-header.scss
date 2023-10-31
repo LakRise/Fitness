@@ -89,9 +89,10 @@
     transform: translateX(-1px);
   }
 
-  &:disabled {
+  &--disabled {
     color: #f8f9fc;
     opacity: 0.5;
+    pointer-events: none;
   }
 }
 
