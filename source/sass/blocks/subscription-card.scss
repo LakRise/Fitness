@@ -1,0 +1,224 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.subscription-card {
+  position: relative;
+  margin: 0;
+  padding: 60px 70px 58px 71px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 360px;
+  background-color: variables.$color-default-white;
+  background-clip: padding-box;
+  border: 7px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 60px 110px 58px;
+    width: 440px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 45px 35px 43px;
+    width: 290px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin: -7px;
+    background: variables.$color-default-white;
+    content: "";
+    transition: all 0.2s ease;
+  }
+
+  @include hover-focus {
+    &::before {
+      background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+    }
+  }
+
+  &:focus-within {
+    &::before {
+      background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+    }
+  }
+}
+
+.subscription-card:hover .subscription-card__button {
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  box-shadow: none;
+  color: $color-default-white;
+}
+
+.subscription-card__title {
+  @include list-title;
+
+  margin: 0 auto 7px;
+  color: variables.$color-default-blue;
+  text-align: center;
+
+  @media (max-width: variables.$vp-1365) {
+    margin-bottom: 14px;
+
+    &--displaced {
+      transform: translateY(-2px);
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    &--displaced {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.subscription-card__badge {
+  margin: 0 auto 13px;
+  text-align: center;
+
+  @media (max-width: variables.$vp-1365) {
+    margin-bottom: 20px;
+
+    &--time {
+      transform: translateX(-1px);
+      color: #495a7d;
+    }
+
+    &--displaced {
+      transform: translate(0, 2px);
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 19px;
+
+    &--displaced {
+      transform: translate(0, 3px);
+    }
+  }
+}
+
+.subscription-card__price-wrapper {
+  margin: 0 0 30px;
+  padding: 54px 18px 6px 19px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  @media (max-width: variables.$vp-1365) {
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 44px 20px 4px 20px;
+    margin-bottom: 19px;
+    gap: 10px;
+  }
+}
+
+.subscription-card__price-wrapper--with-shadow img {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.subscription-card__price {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #103aae;
+
+  &::before {
+    position: absolute;
+    top: -54px;
+    left: -19px;
+    z-index: -1;
+    font-size: 100px;
+    line-height: 150px;
+    color: #e8e8e8;
+    opacity: 0.48;
+    content: attr(data-title);
+  }
+
+  @media (max-width: variables.$vp-1365) {
+    &::before {
+      top: -55px;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    transform: translateX(-1px);
+    font-size: 48px;
+
+    &::before {
+      left: -14px;
+      top: -44px;
+      font-size: 80px;
+      line-height: 120px;
+    }
+  }
+}
+
+.subscription-card__price-wrapper img {
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: variables.$vp-767) {
+    transform: translateY(1px);
+    width: 24px;
+    height: 33px;
+  }
+}
+
+.subscription-card__button {
+  padding: 27px 10px;
+  width: 205px;
+  text-align: center;
+  box-shadow: 2px 2px variables.$color-default-blue inset, -2px -2px variables.$color-default-blue inset;
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 22px 10px;
+
+    &--alt-border {
+      box-shadow: 2px 2px #1c3374 inset, -2px -2px #1c3374 inset;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 23px 10px 21px;
+  }
+
+  @include hover-focus {
+    background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+    box-shadow: none;
+    color: $color-default-white;
+  }
+
+  &:focus {
+    background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+    box-shadow: none;
+    color: $color-default-white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:active:hover:focus {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+

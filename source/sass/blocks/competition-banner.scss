@@ -1,0 +1,217 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.competition-banner {
+  margin: 0 auto 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media (max-width: variables.$vp-1365) {
+    margin: 0 auto 100px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    flex-direction: column;
+  }
+}
+
+.competition-banner__content-wrapper {
+  padding: 80px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-content: start;
+  column-gap: 69px;
+  min-height: 500px;
+  background: #ed0233;
+  color: variables.$color-default-white;
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 40px 45px 45px 45px;
+    column-gap: 40px;
+    min-height: 324px;
+    max-width: 43%;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    justify-content: center;
+    padding: 40px;
+    column-gap: 48px;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+  }
+}
+
+.competition-banner__title {
+  transform: translateY(1px);
+  margin: 0;
+  padding: 0;
+  width: min-content;
+  height: fit-content;
+  font-family: variables.$ff-secondary;
+  font-size: 82px;
+  font-weight: 600;
+  line-height: 76px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  @media (max-width: variables.$vp-1365) {
+    transform: translate(0);
+    font-size: 48px;
+    line-height: 46px;
+  }
+}
+
+.competition-banner__info {
+  margin: 0 0 21px;
+  height: fit-content;
+
+  @media (max-width: variables.$vp-1365) {
+    margin-bottom: 3px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 10px;
+  }
+}
+
+.competition-banner__info-term {
+  transform: translateY(-1px);
+  margin: 0 0 7px;
+  padding: 0;
+  font-size: 18px;
+
+  @media (max-width: variables.$vp-1365) {
+    transform: translate(0);
+    margin: 0;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.competition-banner__info-item {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 5px 0 0;
+  width: fit-content;
+
+  &--2-columns {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 6px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: variables.$color-default-white;
+    content: "";
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (max-width: variables.$vp-1365) {
+    margin-bottom: 8px;
+    padding: 2px 0 0;
+
+    &::before {
+      top: -1px;
+    }
+
+    &--2-columns {
+      gap: 4px;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 6px;
+    padding-top: 3px;
+  }
+}
+
+.competition-banner__info-number {
+  margin: 0;
+  grid-row: 1/-1;
+  width: min-content;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+
+  @media (max-width: variables.$vp-1365) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.competition-banner__info-text {
+  margin: 0;
+  padding: 5px 0 0;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 2px 0 0;
+    gap: 0;
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+
+.competition-banner__text {
+  margin: 0 0 56px;
+  grid-column: 1/-1;
+  font-size: 18px;
+
+  @media (max-width: variables.$vp-1365) {
+    margin-bottom: 21px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 171px;
+  }
+}
+
+.competition-banner__button {
+  margin: 0;
+  padding: 25px 10px;
+  grid-column: 1/-1;
+  width: 100%;
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 20px 10px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    min-width: 210px;
+  }
+}
+
+.competition-banner__picture-wrapper img {
+  @media (max-width: variables.$vp-1365) {
+    width: 386px;
+    height: 324px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    width: 290px;
+    height: 292px;
+  }
+}

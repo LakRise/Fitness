@@ -1,0 +1,15 @@
+@use "../variables.scss";
+
+.competition {
+  position: relative;
+  z-index: 1;
+  padding: 120px 0;
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 101px 0;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 70px 0;
+  }
+}

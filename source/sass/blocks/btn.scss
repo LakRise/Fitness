@@ -1,6 +1,7 @@
 .btn {
   display: inline-flex;
-  border: 2px solid $color-default-blue;
+  color: $color-default-blue;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
 
@@ -16,7 +17,7 @@
   }
 
   &--dark-background {
-    border-color: $color-default-white;
+    border: 2px solid $color-default-white;
     color: $color-default-white;
 
     @include hover-focus {

@@ -106,10 +106,10 @@
         </div>
        </section>
        <section class="subscriptions">
-        <div class="container">
-          <h2 class="subscriptions__titile">Абонементы</h2>
+        <div class="subscriptions__container container">
+          <h2 class="subscriptions__title">Абонементы</h2>
           <div class="subscriptions__tabs">
-            <button class="subscriptions__tabs-button" type="button">
+            <button class="subscriptions__tabs-button subscriptions__tabs-button--active" type="button">
               <span class="subscriptions__tabs-button-text">1 месяц</span>
             </button>
             <button class="subscriptions__tabs-button" type="button">
@@ -123,87 +123,104 @@
             <li class="subscriptions__item subscription-card">
               <h3 class="subscription-card__title">С тренером</h3>
               <p class="subscription-card__badge">12 занятий</p>
-              <div class="subscription-card__price-wrapper">
-                <p class="subscription-card__price">5000</p>
+              <div class="subscription-card__price-wrapper subscription-card__price-wrapper--with-shadow">
+                <p class="subscription-card__price" data-title="5000">5000</p>
                 <picture>
                   <source type="image/svg+xml" media="(max-width: 767px)" srcset="img/svg/ruble-mobile.svg">
                   <img src="img/svg/ruble-desktop.svg" width="30" height="42" alt="рубль.">
                 </picture>
               </div>
-              <a class="subscription-card__button button" href="#">
-                <span class="button__text">Купить абонемент</span>
+              <a class="subscription-card__button btn" href="#">
+                <span class="btn__text">Купить абонемент</span>
               </a>
             </li>
             <li class="subscriptions__item subscription-card">
               <h3 class="subscription-card__title">Дневной</h3>
-              <p class="subscription-card__badge">с 8:00 до 17:00</p>
+              <p class="subscription-card__badge subscription-card__badge--time">с 8:00 до 17:00</p>
               <div class="subscription-card__price-wrapper">
-                <p class="subscription-card__price">1700</p>
+                <p class="subscription-card__price" data-title="1700">1700</p>
                 <picture>
                   <source type="image/svg+xml" media="(max-width: 767px)" srcset="img/svg/ruble-mobile.svg">
                   <img src="img/svg/ruble-desktop.svg" width="30" height="42" alt="рубль.">
                 </picture>
               </div>
-              <a class="subscription-card__button button" href="#">
-                <span class="button__text">Купить абонемент</span>
+              <a class="subscription-card__button btn" href="#">
+                <span class="btn__text">Купить абонемент</span>
               </a>
             </li>
             <li class="subscriptions__item subscription-card">
-              <h3 class="subscription-card__title">Полный день</h3>
-              <p class="subscription-card__badge">с 8:00 до 22:00</p>
+              <h3 class="subscription-card__title subscription-card__title--displaced">Полный день</h3>
+              <p class="subscription-card__badge subscription-card__badge--time subscription-card__badge--displaced">с 8:00 до 22:00</p>
               <div class="subscription-card__price-wrapper">
-                <p class="subscription-card__price">2700</p>
+                <p class="subscription-card__price" data-title="2700">2700</p>
                 <picture>
                   <source type="image/svg+xml" media="(max-width: 767px)" srcset="img/svg/ruble-mobile.svg">
                   <img src="img/svg/ruble-desktop.svg" width="30" height="42" alt="рубль.">
                 </picture>
               </div>
-              <a class="subscription-card__button button" href="#">
-                <span class="button__text">Купить абонемент</span>
+              <a class="subscription-card__button btn subscription-card__button--alt-border" href="#">
+                <span class="btn__text">Купить абонемент</span>
               </a>
             </li>
           </ul>
-        </div>
-       </section>
-       <section class="competition">
-        <div class="container">
-          <div class="competition__content-wrapper">
-            <h2 class="competition__title">SUPER GAMES</h2>
-            <p class="competition__text">Ежегодные соревнования по CrossFit</p>
-            <dl class="competition__info">
-              <dt class="competition__info-term">Дата</dt>
-              <dd class="competition__info-item competition__info-item--2-columns">7
-                <span class="competition__info-text">Марта<br>2019</span>
-              </dd>
-              <dt class="competition__info-term">Время</dt>
-              <dd class="competition__info-item">12:00</dd>
-            </dl>
-            <a class="competition__button button" href="#">
-              <span class="button__text">заполнить заявку</span>
-            </a>
-          </div>
-          <div class="competition__picture-wrapper">
+          <div class="subscriptions__weights-wrapper">
             <picture>
-              <source type="image/webp" media="(max-width: 1365px)" srcset="img/super-games-tablet-1x.webp 1x,
-              img/super-games-tablet-2x.webp 2x">
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/super-games-mobile-1x.webp 1x,
-              img/super-games-mobile-2x.webp 2x">
-              <source type="image/webp" srcset="img/super-games-desktop-1x.webp 1x,
-              img/super-games-desktop-2x.webp 2x">
-              <source type="image/jpg" media="(max-width: 1365px)" srcset="img/super-games-tablet-1x.jpg 1x,
-              img/super-games-tablet-2x.jpg 2x">
-              <source type="image/jpg" media="(max-width: 767px)" srcset="img/super-games-mobile-1x.jpg 1x,
-              img/super-games-mobile-2x.jpg 2x">
-              <img src="img/super-games-desktop-1x.jpg" srcset="img/super-games-desktop-2x.jpg 2x" width="660" height="500"
-              alt="Соревнование super games.">
+              <source type="image/webp" media="(max-width: 1365px)" srcset="img/weights-tablet-1x.webp 1x,
+              img/weights-tablet-2x.webp.2x">
+              <source type="image/webp" srcset="img/weights-desktop-1x.webp 1x,
+              img/weights-desktop-2x.webp 2x">
+              <source type="image/png" media="(max-width: 1365px)" srcset="img/weights-tablet-1x.png 1x,
+              img/weights-tablet-2x.png 2x">
+              <img src="img/weights-desktop-1x.png" srcset="img/weights-desktop-2x.png" width="470" height="494"
+              alt="">
             </picture>
           </div>
         </div>
        </section>
-       <section class="jury">
+       <section class="competition">
+        <h2 class="visually-hidden">Соревнования в Supergym</h2>
         <div class="container">
-          <h2 class="jury__titile">Жюри</h2>
-          <ul class="jury__list">
+          <div class="competition__banner-wrapper competition-banner">
+            <div class="competition-banner__content-wrapper">
+              <h3 class="competition-banner__title">SUPER GAMES</h3>
+              <dl class="competition-banner__info">
+                <dt class="competition-banner__info-term">Дата</dt>
+                <dd class="competition-banner__info-item competition-banner__info-item--2-columns">
+                  <span class="competition-banner__info-number">7</span>
+                  <p class="competition-banner__info-text">
+                    <span class="competition-banner__info-month">Марта</span>
+                    <span class="competition-banner__info-year">2019</span>
+                  </p>
+                </dd>
+                <dt class="competition-banner__info-term">Время</dt>
+                <dd class="competition-banner__info-item">
+                  <span class="competition-banner__info-number">12:00</span>
+                </dd>
+              </dl>
+              <p class="competition-banner__text">Ежегодные соревнования по CrossFit</p>
+              <a class="competition-banner__button btn btn--dark-background" href="#">
+                <span class="btn__text">заполнить заявку</span>
+              </a>
+            </div>
+            <div class="competition-banner__picture-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/super-games-mobile-1x.webp 1x,
+                img/super-games-mobile-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1365px)" srcset="img/super-games-tablet-1x.webp 1x,
+                img/super-games-tablet-2x.webp 2x">
+                <source type="image/webp" srcset="img/super-games-desktop-1x.webp 1x,
+                img/super-games-desktop-2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 767px)" srcset="img/super-games-mobile-1x.jpg 1x,
+                img/super-games-mobile-2x.jpg 2x">
+                <source type="image/jpg" media="(max-width: 1365px)" srcset="img/super-games-tablet-1x.jpg 1x,
+                img/super-games-tablet-2x.jpg 2x">
+                <img src="img/super-games-desktop-1x.jpg" srcset="img/super-games-desktop-2x.jpg 2x" width="660" height="500"
+                alt="Соревнование super games.">
+              </picture>
+            </div>
+          </div>
+          <h3 class="competition__jury-title">Жюри</h3>
+          <ul class="competition__jury-list jury">
             <li class="jury__item jury-card jury-card--inactive">
               <h3 class="jury-card__title">Анна Павлова</h3>
               <div class="jury-card__content-wrapper">
