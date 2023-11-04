@@ -8,10 +8,11 @@
   align-items: flex-start;
 
   @media (max-width: variables.$vp-1365) {
-    margin: 0 auto 100px;
+    margin: 0 auto 101px;
   }
 
   @media (max-width: variables.$vp-767) {
+    margin-bottom: 71px;
     flex-direction: column;
   }
 }
