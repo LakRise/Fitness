@@ -1,0 +1,234 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.faq-accordion__item {
+  position: relative;
+  padding: 26px 0 20px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(28, 51, 116, 0.2);
+    content: "";
+  }
+
+  &:last-of-type {
+    padding-bottom: 22px;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(28, 51, 116, 0.2);
+      content: "";
+    }
+  }
+
+  &:first-of-type {
+    padding-top: 25px;
+  }
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 26px 0 22px;
+
+    &:first-of-type {
+      padding-top: 26px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 23px;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 23px 0 1px;
+
+    &:first-of-type {
+      padding-top: 23px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 2px;
+    }
+  }
+}
+
+.faq-accordion__item.is-active {
+  padding-bottom: 24px;
+
+  @media (max-width: variables.$vp-767) {
+    padding-bottom: 21px;
+  }
+}
+
+.faq-accordion__button-wrapper {
+  margin: 0 0 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: variables.$vp-1365) {
+    margin-bottom: 2px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 20px;
+  }
+}
+
+.faq-accordion__button-wrapper:hover .faq-accordion__button {
+  background-color: #1c3374;
+
+  &::before {
+    background-color: variables.$color-default-white;
+  }
+
+  &::after {
+    background-color: variables.$color-default-white;
+  }
+}
+
+.faq-accordion__button-wrapper:focus-within .faq-accordion__button {
+  background-color: #1c3374;
+
+  &::before {
+    background-color: variables.$color-default-white;
+  }
+
+  &::after {
+    background-color: variables.$color-default-white;
+  }
+}
+
+.faq-accordion__item.is-active .faq-accordion__button {
+  background-color: #1c3374;
+
+  &::before {
+    background-color: variables.$color-default-white;
+  }
+
+  &::after {
+    background-color: transparent;
+  }
+}
+
+.faq-accordion__heading {
+  margin: 0;
+  max-width: 80%;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+
+  br {
+    display: none;
+  }
+
+  @media (max-width: variables.$vp-1365) {
+    transform: translateY(1px);
+    font-size: 22px;
+    line-height: 22px;
+
+    &--with-break-2 {
+      br {
+        display: inline;
+      }
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    transform: translateY(0);
+    font-size: 20px;
+    line-height: 20px;
+
+    &--with-break-1 {
+      br {
+        display: inline;
+      }
+    }
+  }
+}
+
+.faq-accordion__text {
+  margin: 0;
+  max-width: 76%;
+  font-size: 18px;
+
+  @media (max-width: variables.$vp-1365) {
+    max-width: 80%;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    max-width: 95%;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.faq-accordion__button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #1c3374;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &::before {
+    width: 20px;
+    height: 1px;
+    background: #1c3374;
+    content: "";
+    transition: all 0.2s ease;
+  }
+
+  &::after {
+    position: absolute;
+    top: 9px;
+    left: calc(50% - 1px);
+    width: 1px;
+    height: 20px;
+    background: #1c3374;
+    content: "";
+    transition: all 0.2s ease;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    width: 30px;
+    height: 30px;
+
+    &::before {
+      width: 14px;
+    }
+
+    &::after {
+      top: 7px;
+      height: 14px;
+    }
+  }
+
+  &:active {
+    background-color: #1c3374;
+
+    &::before {
+      background-color: variables.$color-default-white;
+    }
+
+    &::after {
+      background-color: transparent;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}

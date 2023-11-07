@@ -47,12 +47,6 @@
 .competition__jury-button {
   position: absolute;
   top: calc(50% - 31px);
-  background: transparent;
-  color: variables.$color-default-blue;
-  border: 1px solid transparent;
-  border-radius: 100%;
-  cursor: pointer;
-  transition: all 0.2s ease;
 
   &--left {
     left: -75px;
@@ -75,42 +69,16 @@
   }
 
   @media (max-width: variables.$vp-767) {
-    top: calc(50% - 23px);
+    top: calc(50% - 18px);
 
     &--left {
-      left: -16px;
+      left: -8px;
+      padding: 8px 13px 6px 10px;
     }
 
     &--right {
-      right: -16px;
+      right: -8px;
+      padding: 8px 10px 6px 13px;
     }
-  }
-
-  @include hover-focus {
-    border-color: variables.$color-default-blue;
-    outline: none;
-  }
-
-  &:active {
-    border-color: transparent;
-    background-color: variables.$color-default-blue;
-    color: variables.$color-default-white;
-  }
-
-  &:hover:focus:active {
-    border-color: transparent;
-    background-color: variables.$color-default-blue;
-    color: variables.$color-default-white;
-  }
-
-  &:disabled {
-    opacity: 0.3;
-  }
-}
-
-.competition__jury-button svg {
-  @media (max-width: variables.$vp-767) {
-    width: 10px;
-    height: 19px;
   }
 }

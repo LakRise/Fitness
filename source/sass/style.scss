@@ -4,6 +4,10 @@
 @import "vendor/normalize";
 // Swiper 8.4.7
 @import "vendor/swiper";
+@import "vendor/accordion.scss";
+@import "vendor/data-accordion.scss";
+@import "vendor/tabs.scss";
+@import "vendor/data-tabs.scss";
 
 // Global
 // ---------------------------------
@@ -27,6 +31,12 @@
 @import "blocks/competition.scss";
 @import "blocks/competition-banner.scss";
 @import "blocks/jury-card.scss";
+@import "blocks/arrow-button.scss";
+@import "blocks/advantages.scss";
+@import "blocks/promotions.scss";
+@import "blocks/faq.scss";
+@import "blocks/faq-accordion.scss";
+@import "blocks/feedback.scss";
 @import "blocks/custom-input";
 
 

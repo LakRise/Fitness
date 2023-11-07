@@ -1,0 +1,40 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.arrow-button {
+  background: transparent;
+  color: variables.$color-default-blue;
+  border: 1px solid transparent;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  @include hover-focus {
+    border-color: variables.$color-default-blue;
+    outline: none;
+  }
+
+  &:active {
+    border-color: transparent;
+    background-color: variables.$color-default-blue;
+    color: variables.$color-default-white;
+  }
+
+  &:hover:focus:active {
+    border-color: transparent;
+    background-color: variables.$color-default-blue;
+    color: variables.$color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.arrow-button svg {
+  @media (max-width: variables.$vp-767) {
+    width: 10px;
+    height: 19px;
+  }
+}

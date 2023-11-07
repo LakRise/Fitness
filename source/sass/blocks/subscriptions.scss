@@ -3,7 +3,7 @@
 
 .subscriptions {
   padding: 132px 0 120px;
-  background-color: #f8f9fc;
+  background-color: variables.$color-default-grey;
 
   @media (max-width: variables.$vp-1365) {
     padding: 101px 0 99px;

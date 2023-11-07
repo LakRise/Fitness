@@ -5,7 +5,7 @@ const setSwiperJury = () => {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 'auto',
-    autoHeight: true,
+    autoHeight: false,
     slideActiveClass: 'slide-active',
     focusableElements: '.slide-active',
     breakpoints: {
@@ -19,7 +19,6 @@ const setSwiperJury = () => {
         spaceBetween: 40,
       },
     },
-
     navigation: {
       nextEl: '[data-jury-button="right"]',
       prevEl: '[data-jury-button="left"]',

@@ -41,13 +41,13 @@
 
   @include hover-focus {
     &::before {
-      background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+      background: linear-gradient(150deg, #d10a42 5%, #00359f 95%);
     }
   }
 
   &:focus-within {
     &::before {
-      background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+      background: linear-gradient(150deg, #d10a42 5%, #00359f 95%);
     }
   }
 }
@@ -125,10 +125,6 @@
     margin-bottom: 19px;
     gap: 10px;
   }
-}
-
-.subscription-card__price-wrapper--with-shadow img {
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .subscription-card__price {
