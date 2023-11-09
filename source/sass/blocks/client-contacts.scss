@@ -1,0 +1,132 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.client-contacts {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 0 -103px;
+  padding: 62px 170px 59px 103px;
+  background: variables.$color-default-blue;
+
+  @media (max-width: variables.$vp-1365) {
+    margin: 0 -45px 0 -45px;
+    padding: 101px 133px 99px;
+    width: 100vw;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin: 0 -15px 0 -15px;
+    padding: 71px 15px 70px;
+  }
+}
+
+.client-contacts__title {
+  @include section-title;
+  margin: 0 0 33px;
+  color: variables.$color-default-white;
+
+  @media (max-width: variables.$vp-1365) {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 31px;
+  }
+}
+
+.client-contacts form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 28px;
+
+  @media (max-width: variables.$vp-1365) {
+    column-gap: 60px;
+    row-gap: 29px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 26px;
+  }
+}
+
+.client-contacts input {
+  padding: 11px 6px 2px 5px;
+  width: 100%;
+  font-family: variables.$ff-placeholder;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: variables.$color-default-white;
+  background: variables.$color-default-blue;
+  border: none;
+  border-bottom: 1px solid #74819c;
+  transition: all 0.2s ease;
+
+  &::placeholder {
+    transform: translateX(-5px);
+    color: variables.$color-default-white;
+  }
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 9px 6px 3px 5px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include hover {
+    border-color: variables.$color-default-white;
+  }
+
+  @include focus {
+    border-color: variables.$color-default-white;
+    outline: none;
+    box-shadow: 1px 1px inset variables.$color-default-white, -1px 0 inset variables.$color-default-white;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.client-contacts label {
+  position: relative;
+  width: 100%;
+}
+
+.client-contacts__button {
+  margin: 0;
+  padding: 25px 54px;
+  grid-column: 1/-1;
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 20px 54px;
+    width: 100%;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-top: 13px;
+  }
+}
+
+.client-contacts__button-text {
+  transform: translateY(1px);
+
+  @media (max-width: variables.$vp-1365) {
+    transform: translate(0);
+  }
+}

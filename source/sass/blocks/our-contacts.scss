@@ -1,0 +1,152 @@
+@use "../variables.scss";
+@use "../mixins.scss" as *;
+
+.our-contacts {
+  padding: 63px 0 63px 120px;
+
+  @media (max-width: variables.$vp-1365) {
+    padding: 100px 88px 99px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    padding: 67px 0 68px;
+  }
+}
+
+.our-contacts__title {
+  @include section-title;
+  margin: 0 0 41px;
+
+  @media (max-width: variables.$vp-1365) {
+    margin-bottom: 37px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 37px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.our-contacts__address {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 120px;
+  font-style: normal;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 10px);
+    width: 1px;
+    height: calc(100% - 1px);
+    background: #74819c;
+    content: "";
+  }
+
+  @media (max-width: variables.$vp-1365) {
+    &::after {
+      top: -1px;
+      left: 50%;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 26px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.our-contacts__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 13px;
+  list-style-type: none;
+
+  &--alt-gap {
+    row-gap: 14px;
+  }
+
+  @media (max-width: variables.$vp-1365) {
+    row-gap: 27px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    row-gap: 26px;
+  }
+}
+
+.our-contacts__label {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+
+  &--alt-margin {
+    margin-bottom: 3px;
+  }
+
+  &--alt-margin-2 {
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: variables.$vp-1365) {
+    margin-bottom: 11px;
+    font-size: 22px;
+    line-height: 22px;
+
+    &--alt-margin {
+      margin-bottom: 9px;
+    }
+
+    &--alt-margin-2 {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: variables.$vp-767) {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.our-contacts__link {
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:active:hover:focus {
+    opacity: 0.6;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+  }
+}
+
+.our-contacts__text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}

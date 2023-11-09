@@ -36,6 +36,15 @@
 
 @font-face {
   font-family: "Alumni Sans";
+  font-style: "normal";
+  font-weight: 700;
+  src: url("../../fonts/AlumniSans-Bold.woff2") format("woff2"),
+    url("../../fonts/AlumniSans-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alumni Sans";
   font-style: normal;
   font-weight: 800;
   src: url("../../fonts/AlumniSans-ExtraBold.woff2") format("woff2"),

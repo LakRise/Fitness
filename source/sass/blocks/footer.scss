@@ -1,0 +1,35 @@
+@use "../variables.scss";
+
+.footer__contacts-wrapper {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: -1;
+    width: 100vw;
+    height: 1px;
+    background: #74819c;
+    content: "";
+  }
+
+  @media (max-width: variables.$vp-1365) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.footer__contacts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: variables.$vp-1365) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+}

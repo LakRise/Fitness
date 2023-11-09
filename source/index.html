@@ -811,106 +811,114 @@
           </div>
         </div>
        </section>
-       <div class="main-index__contacts-wrapper">
-        <section class="client-contacts">
-          <h2 class="client-contacts__title">Бесплатное занятие</h2>
-          <div class="container">
-            <form  action="https://echo.htmlacademy.ru" method="post">
-              <label>
-                <input type="text" name="name" required placeholder="Имя">
-              </label>
-              <label>
-                <input type="tel" name="phone" required placeholder="Телефон">
-              </label>
-              <button class="client-contacts__button button" type="submit">
-                <span class="client-contacts__button-text">отправить</span>
-              </button>
-            </form>
-          </div>
-        </section>
-        <section class="our-contacts">
-          <div class="container">
-            <h2 class="our-contacts__title">Контакты</h2>
-            <address class="our-contacts__address">
-              <ul class="our-contacts__list">
-                <li class="our-contacts__item">
-                  <h3 class="our-contacts__label">Адрес:</h3>
-                  <p class="our-contacts__text">г. Омск, ул. 60 лет Октября, 7</p>
-                </li>
-                <li class="our-contacts__item">
-                  <h3 class="our-contacts__label">Телефон:</h3>
-                  <a class="our-contacts__link" href="88005555555">
-                    <span class="our-contacts__text">8-800-555-55-55</span>
-                  </a>
-                </li>
-                <li class="our-contacts__item">
-                  <h3 class="our-contacts__label">График работы:</h3>
-                  <p class="our-contacts__text">Пн-Вс: с 8:00 до 22:00</p>
-                </li>
-                <li class="our-contacts__item">
-                  <h3 class="our-contacts__label">Email:</h3>
-                  <a class="our-contacts__link" href="omsk@supergym.ru">
-                    <span class="our-contacts__text">omsk@supergym.ru</span>
-                  </a>
-              </ul>
-            </address>
-          </div>
-        </section>
-       </div>
       </main>
       <footer class="footer">
-        <div class="container">
-          <a class="footer__logo" href="index.html">
-            <img src="img/svg/logo.svg" width="109" height="24" alt="Логотип фитнес центра Supergym.">
+        <div class="footer__contacts-wrapper">
+          <div class="footer__contacts-container container">
+            <section class="client-contacts">
+              <h2 class="client-contacts__title">Бесплатное занятие</h2>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <label>
+                  <span class="visually-hidden">Ваше имя</span>
+                  <input type="text" name="name" required placeholder="Имя">
+                </label>
+                <label>
+                  <span class="visually-hidden">Ваш телефон</span>
+                  <input type="tel" name="phone" required placeholder="Телефон">
+                </label>
+                <button class="client-contacts__button btn btn--dark-background" type="submit">
+                  <span class="client-contacts__button-text btn__text">отправить</span>
+                </button>
+              </form>
+            </section>
+            <section class="our-contacts">
+              <h2 class="our-contacts__title">Контакты</h2>
+              <address class="our-contacts__address">
+                <ul class="our-contacts__list">
+                  <li class="our-contacts__item">
+                    <h3 class="our-contacts__label">Адрес:</h3>
+                    <p class="our-contacts__text">г. Омск, ул. 60 лет Октября, 7</p>
+                  </li>
+                  <li class="our-contacts__item">
+                    <h3 class="our-contacts__label">График работы:</h3>
+                    <p class="our-contacts__text">Пн-Вс: с 8:00 до 22:00</p>
+                  </li>
+                </ul>
+                <ul class="our-contacts__list our-contacts__list--alt-gap">
+                  <li class="our-contacts__item">
+                    <h3 class="our-contacts__label our-contacts__label--alt-margin">Телефон:</h3>
+                    <a class="our-contacts__link" href="88005555555">
+                      <span class="our-contacts__text">8-800-555-55-55</span>
+                    </a>
+                  </li>
+                  <li class="our-contacts__item">
+                    <h3 class="our-contacts__label our-contacts__label--alt-margin-2">Email:</h3>
+                    <a class="our-contacts__link" href="omsk@supergym.ru">
+                      <span class="our-contacts__text">omsk@supergym.ru</span>
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </section>
+          </div>
+        </div>
+        <section class="footer-links">
+        <div class="footer-links__container container">
+          <a class="footer-links__logo" href="index.html">
+            <picture>
+              <source type="img/svg+xml" media="(max-width: 767px)" srcset="img/svg/footer-logo-mobile.svg">
+              <source type="img/svg+xml" media="(max-width: 1365px)" srcset="img/svg/footer-logo-tablet.svg">
+              <img src="img/svg/footer-logo-desktop.svg" width="106" height="18" alt="Логотип фитнес центра Supergym.">
+            </picture>
           </a>
-          <nav class="footer__navigation">
-            <ul class="footer__navigation-list">
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  <span class="footer__navigation-text">Услуги</span>
+          <nav class="footer-links__navigation">
+            <ul class="footer-links__navigation-list">
+              <li class="footer-links__navigation-item">
+                <a class="footer-links__navigation-link" href="#">
+                  <span class="footer-links__navigation-text">Услуги</span>
                 </a>
               </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  <span class="footer__navigation-text">Абонементы</span>
+              <li class="footer-links__navigation-item">
+                <a class="footer-links__navigation-link" href="#">
+                  <span class="footer-links__navigation-text">Абонементы</span>
                 </a>
               </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  <span class="footer__navigation-text">Акции</span>
+              <li class="footer-links__navigation-item">
+                <a class="footer-links__navigation-link" href="#">
+                  <span class="footer-links__navigation-text">Акции</span>
                 </a>
               </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  <span class="footer__navigation-text">Тренеры</span>
+              <li class="footer-links__navigation-item">
+                <a class="footer-links__navigation-link footer-links__navigation-link--displaced" href="#">
+                  <span class="footer-links__navigation-text">Тренеры</span>
                 </a>
               </li>
-              <li class="footer__navigation-item">
-                <a class="footer__navigation-link" href="#">
-                  <span class="footer__navigation-text">Расписание</span>
+              <li class="footer-links__navigation-item">
+                <a class="footer-links__navigation-link" href="#">
+                  <span class="footer-links__navigation-text">Расписание</span>
                 </a>
               </li>
             </ul>
           </nav>
-          <ul class="footer__social">
-            <li class="footer__social-item">
-              <a class="footer__social-link" href="#">
+          <ul class="footer-links__social-list">
+            <li class="footer-links__social-item">
+              <a class="footer-links__social-link footer-links__social-link--vk" href="#">
                 <svg aria-hidden="true" focusable="false" width="15" height="15" fill="currentColor">
                   <use href="img/sprite.svg#vk"></use>
                 </svg>
                 <span class="visually-hidden">vk</span>
               </a>
             </li>
-            <li class="footer__social-item">
-              <a class="footer__social-link" href="#">
+            <li class="footer-links__social-item">
+              <a class="footer-links__social-link footer-links__social-link--ok" href="#">
                 <svg aria-hidden="true" focusable="false" width="10" height="17" fill="currentColor">
                   <use href="img/sprite.svg#ok"></use>
                 </svg>
                 <span class="visually-hidden">ok</span>
               </a>
             </li>
-            <li class="footer__social-item">
-              <a class="footer__social-link" href="#">
+            <li class="footer-links__social-item">
+              <a class="footer-links__social-link" href="#">
                 <svg aria-hidden="true" focusable="false" width="15" height="15" fill="currentColor">
                   <use href="img/sprite.svg#reddit"></use>
                 </svg>
@@ -919,36 +927,8 @@
             </li>
           </ul>
         </div>
+        </section>
       </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
