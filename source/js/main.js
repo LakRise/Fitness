@@ -1,8 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
 import {setSwiperJury} from './modules/swiper-jury.js';
 import {setSwiperFeedback} from './modules/swiper-feedback.js';
+import {setVideo} from './modules/play-button.js';
+import './modules/subscription-tabs.js';
+import './modules/form-validate.js';
+import { setPriceSelect } from './modules/price-select.js';
 
 // ---------------------------------
 
@@ -15,18 +17,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  setVideo();
+  setPriceSelect();
   setSwiperJury();
   setSwiperFeedback();
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-    const form = new Form();
-    window.form = form;
-    form.init();
-  });
 });
+
+// все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
+// в load следует добавить скрипты, не участвующие в работе первого экрана
 
 // ---------------------------------
 
@@ -50,5 +48,4 @@ window.addEventListener('DOMContentLoaded', () => {
 // };
 // breakpoint.addListener(breakpointChecker);
 // breakpointChecker();
-
-// используйте .closest(el)
+// используйте .closest(el);

@@ -5,7 +5,7 @@
   padding: 118px 0;
 
   @media (max-width: variables.$vp-1365) {
-    padding: 100px 0;
+    padding: 101px 0 100px;
   }
 
   @media (max-width: variables.$vp-767) {
@@ -23,7 +23,7 @@
   }
 
   @media (max-width: variables.$vp-767) {
-    transform: translateX(-2px);
+    transform: translateX(-1px);
     margin-bottom: 45px;
   }
 }

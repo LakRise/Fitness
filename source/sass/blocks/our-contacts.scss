@@ -2,7 +2,7 @@
 @use "../mixins.scss" as *;
 
 .our-contacts {
-  padding: 63px 0 63px 120px;
+  padding: 61px 0 63px 120px;
 
   @media (max-width: variables.$vp-1365) {
     padding: 100px 88px 99px;

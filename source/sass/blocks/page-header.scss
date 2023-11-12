@@ -31,10 +31,6 @@
   @media (max-width: variables.$vp-1365) {
     padding: 0;
   }
-
-  @media (max-width: variables.$vp-767) {
-    transform: translateY(-1px);
-  }
 }
 
 .page-header__logo img {
@@ -46,8 +42,8 @@
   }
 
   @media (max-width: variables.$vp-767) {
-    width: 102px;
-    height: 22px;
+    width: 101px;
+    height: 21px;
   }
 }
 

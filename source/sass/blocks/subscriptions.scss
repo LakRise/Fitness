@@ -2,11 +2,11 @@
 @use "../mixins.scss" as *;
 
 .subscriptions {
-  padding: 132px 0 120px;
+  padding: 126px 0 120px;
   background-color: variables.$color-default-grey;
 
   @media (max-width: variables.$vp-1365) {
-    padding: 101px 0 99px;
+    padding: 101px 0 100px;
   }
 
   @media (max-width: variables.$vp-767) {

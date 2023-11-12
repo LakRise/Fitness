@@ -58,6 +58,18 @@
   color: $color-default-white;
 }
 
+.subscription-card.is-active {
+  &::before {
+    background: linear-gradient(150deg, #d10a42 5%, #00359f 95%);
+  }
+}
+
+.subscription-card.is-active .subscription-card__button {
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  box-shadow: none;
+  color: $color-default-white;
+}
+
 .subscription-card__title {
   @include list-title;
 

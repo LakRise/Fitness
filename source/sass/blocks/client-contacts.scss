@@ -5,8 +5,19 @@
   position: relative;
   z-index: 2;
   margin: 0 0 0 -103px;
-  padding: 62px 170px 59px 103px;
+  padding: 60px 170px 59px 103px;
   background: variables.$color-default-blue;
+
+  &::before {
+    position: absolute;
+    left: calc(-50vw + 50%);
+    top: 0;
+    z-index: -1;
+    width: 50vw;
+    height: 100%;
+    background: variables.$color-default-blue;
+    content: "";
+  }
 
   @media (max-width: variables.$vp-1365) {
     margin: 0 -45px 0 -45px;

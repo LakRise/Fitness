@@ -5,126 +5,134 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Supergym - фитнес центр в Омске.">
-    <title>Fitness</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="stylesheet" href="css/style.min.css">
+    <title>Fitness</title>
   </head>
   <body>
     <div class="wrapper">
-      <header class="page-header">
-        <div class="page-header__container container">
-          <a class="page-header__logo" href="#">
-            <picture>
-              <source type="img/svg+xml" media="(max-width: 767px)" srcset="img/svg/header-logo-mobile.svg">
-              <source type="img/svg+xml" media="(max-width: 1365px)" srcset="img/svg/header-logo-tablet.svg">
-              <img src="img/svg/header-logo-desktop.svg" width="120" height="26" alt="Логотип фитнес центра Supergym.">
-            </picture>
-          </a>
-          <a class="page-header__link" href="88005555555">
-            <span class="page-header__text">8-800-555-55-55</span>
-          </a>
-        </div>
-      </header>
       <main class="main-index">
         <h1 class="visually-hidden">Фитнес центр Supergym</h1>
-       <section class="hero">
-        <div class="container">
-          <div class="hero__wrapper">
-            <div class="hero__content-wrapper">
-              <h2 class="hero__title">
-                <span class="hero__title-displaced">Фитнес</span><br>центр
-              </h2>
-              <p class="hero__badge">ОМСК</p>
-              <p class="hero__text">Тренажёрный зал<br>Групповые занятия<br>Кардио-зона</p>
-              <a class="hero__button btn btn--dark-background" href="#">
-                <span class="hero__button-text btn__text">Купить абонемент</span>
-              </a>
-            </div>
-            <div class="hero__picture-wrapper">
+        <div data-test="hero">
+        <header class="page-header">
+          <div class="page-header__container container">
+            <a class="page-header__logo" href="#">
               <picture>
-                <source type="image/webp" media="(max-width: 1365px)" srcset="img/hero-tablet-1x.webp 1x,
-                img/hero-tablet-2x.webp 2x">
-                <source type="image/webp" srcset="img/hero-desktop-1x.webp 1x,
-                img/hero-desktop-2x.webp 2x">
-                <source type="image/jpg" media="(max-width: 1365px)" srcset="img/hero-tablet-1x.jpg 1x,
-                img/hero-tablet-2x.jpg 2x">
-                <img src="img/hero-desktop-1x.jpg" srcset="img/hero-desktop-2x.jpg 2x" width="500" height="524"
-                alt="клиент Supergym.">
+                <source type="img/svg+xml" media="(max-width: 767px)" srcset="img/svg/header-logo-mobile.svg">
+                <source type="img/svg+xml" media="(max-width: 1365px)" srcset="img/svg/header-logo-tablet.svg">
+                <img src="img/svg/header-logo-desktop.svg" width="120" height="26" alt="Логотип фитнес центра Supergym.">
               </picture>
+            </a>
+            <a class="page-header__link" href="88005555555">
+              <span class="page-header__text">8-800-555-55-55</span>
+            </a>
+          </div>
+        </header>
+        <section class="hero">
+          <div class="container">
+            <div class="hero__wrapper">
+              <div class="hero__content-wrapper">
+                <h2 class="hero__title">
+                  <span class="hero__title-displaced">Фитнес</span><br>центр
+                </h2>
+                <p class="hero__badge">ОМСК</p>
+                <p class="hero__text">Тренажёрный зал<br>Групповые занятия<br>Кардио-зона</p>
+                <a class="hero__button btn btn--dark-background" href="#">
+                  <span class="hero__button-text btn__text">Купить абонемент</span>
+                </a>
+              </div>
+              <div class="hero__picture-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/hero-tablet-1x.webp 1x,
+                  img/hero-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/hero-desktop-1x.webp 1x,
+                  img/hero-desktop-2x.webp 2x">
+                  <source type="image/jpg" media="(max-width: 1365px)" srcset="img/hero-tablet-1x.jpg 1x,
+                  img/hero-tablet-2x.jpg 2x">
+                  <img src="img/hero-desktop-1x.jpg" srcset="img/hero-desktop-2x.jpg 2x" width="500" height="524"
+                  alt="клиент Supergym.">
+                </picture>
+              </div>
             </div>
           </div>
+        </section>
         </div>
-       </section>
-       <section class="promo">
-        <div class="promo__container container">
-          <div class="promo__text-wrapper">
-            <h2 class="promo__title">Тренажерный зал</h2>
-            <p class="promo__badge">Просторный зал площадью 900 кв/м</p>
-            <p class="promo__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал
-            оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
-            <p class="promo__text promo__text--desktop-only">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько
-            оборудованных залов для различных видов групповых занятий.</p>
-          </div>
-          <div class="promo__images-wrapper">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/promo-gym-mobile-1x.webp 1x,
-              img/promo-gym-mobile-2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1365px)" srcset="img/promo-gym-tablet-1x.webp 1x,
-              img/promo-gym-tablet-2x.webp 2x">
-              <source type="image/webp" srcset="img/promo-gym-desktop-1x.webp 1x,
-              img/promo-gym-desktop-2x.webp 2x">
-              <source type="image/jpg" media="(max-width: 767px)" srcset="img/promo-gym-mobile-1x.jpg 1x,
-              img/promo-gym-mobile-2x.jpg 2x">
-              <source type="image/jpg" media="(max-width: 1365px)" srcset="img/promo-gym-tablet-1x.jpg 1x,
-              img/promo-gym-tablet-2x.jpg 2x">
-              <img src="img/promo-gym-desktop-1x.jpg" srcset="img/promo-gym-desktop-2x.jpg 2x" width="660" height="401"
-              alt="тренажерный зал.">
-            </picture>
-            <div class="promo__video-container">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/video-overlay-mobile-1x.webp 1x,
-                img/video-overlay-mobile-2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1365px)" srcset="img/video-overlay-tablet-1x.webp 1x,
-                img/video-overlay-tablet-2x.webp 2x">
-                <source type="image/webp" srcset="img/video-overlay-desktop-1x.webp 1x,
-                img/video-overlay-desktop-2x.webp 2x">
-                <source type="image/png" media="(max-width: 767px)" srcset="img/video-overlay-mobile-1x.png 1x,
-                img/video-overlay-mobile-2x.png 2x">
-                <source type="image/png" media="(max-width: 1365px)" srcset="img/video-overlay-tablet-1x.png 1x,
-                img/video-overlay-tablet-2x.png 2x">
-                <img src="img/video-overlay-desktop-1x.png" srcset="img/video-overlay-desktop-2x.png 2x" width="364" height="228"
-                alt="">
-              </picture>
-              <iframe class="promo__video" src="https://www.youtube.com/embed/9TZXsZItgdw" width="364" height="228"></iframe>
-              <button class="promo__video-button" type="button">
-                <svg aria-hidden="true" focusable="false" width="13" height="15" fill="currentColor">
-                  <use href="img/sprite.svg#play"></use>
-                </svg>
-                <span class="visually-hidden">Запустить видео</span>
-              </a>
+        <section class="promo" data-test="about">
+          <div class="promo__container container">
+            <div class="promo__text-wrapper">
+              <h2 class="promo__title">Тренажерный зал</h2>
+              <p class="promo__badge">Просторный зал площадью 900 кв/м</p>
+              <p class="promo__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал
+              оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+              <p class="promo__text promo__text--desktop-only">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько
+              оборудованных залов для различных видов групповых занятий.</p>
+            </div>
+            <div class="promo__images-wrapper">
+              <div class="promo__picture-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/promo-gym-mobile-1x.webp 1x,
+                  img/promo-gym-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/promo-gym-tablet-1x.webp 1x,
+                  img/promo-gym-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/promo-gym-desktop-1x.webp 1x,
+                  img/promo-gym-desktop-2x.webp 2x">
+                  <source type="image/jpg" media="(max-width: 767px)" srcset="img/promo-gym-mobile-1x.jpg 1x,
+                  img/promo-gym-mobile-2x.jpg 2x">
+                  <source type="image/jpg" media="(max-width: 1365px)" srcset="img/promo-gym-tablet-1x.jpg 1x,
+                  img/promo-gym-tablet-2x.jpg 2x">
+                  <img src="img/promo-gym-desktop-1x.jpg" srcset="img/promo-gym-desktop-2x.jpg 2x" width="660" height="401"
+                  alt="тренажерный зал.">
+                </picture>
+              </div>
+              <div class="promo__video-container" data-video="container">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/video-overlay-mobile-1x.webp 1x,
+                  img/video-overlay-mobile-2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/video-overlay-tablet-1x.webp 1x,
+                  img/video-overlay-tablet-2x.webp 2x">
+                  <source type="image/webp" srcset="img/video-overlay-desktop-1x.webp 1x,
+                  img/video-overlay-desktop-2x.webp 2x">
+                  <source type="image/png" media="(max-width: 767px)" srcset="img/video-overlay-mobile-1x.png 1x,
+                  img/video-overlay-mobile-2x.png 2x">
+                  <source type="image/png" media="(max-width: 1365px)" srcset="img/video-overlay-tablet-1x.png 1x,
+                  img/video-overlay-tablet-2x.png 2x">
+                  <img src="img/video-overlay-desktop-1x.png" srcset="img/video-overlay-desktop-2x.png 2x" width="364" height="228"
+                  alt="">
+                </picture>
+                <iframe class="promo__video" src="https://www.youtube.com/embed/9TZXsZItgdw" width="364" height="228" tabindex="-1"
+                data-video="video"></iframe>
+                <button class="promo__video-button" type="button" data-video="play-button">
+                  <svg aria-hidden="true" focusable="false" width="13" height="15" fill="currentColor">
+                    <use href="img/sprite.svg#play"></use>
+                  </svg>
+                  <span class="visually-hidden">Запустить видео</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-       </section>
-       <section class="subscriptions">
-        <div class="subscriptions__container container">
+        </section>
+       <section class="subscriptions" data-test="price">
+        <div class="subscriptions__container container" data-subscription="container">
           <h2 class="subscriptions__title">Абонементы</h2>
-          <div class="subscriptions__tabs">
-            <button class="subscriptions__tabs-button subscriptions__tabs-button--active" type="button">
+          <div class="subscriptions__tabs" data-subscription="tabs">
+            <button class="subscriptions__tabs-button subscriptions__tabs-button--active" type="button" data-subscription="tab-1month">
               <span class="subscriptions__tabs-button-text">1 месяц</span>
             </button>
-            <button class="subscriptions__tabs-button" type="button">
+            <button class="subscriptions__tabs-button" type="button" data-subscription="tab-6months">
               <span class="subscriptions__tabs-button-text">6 месяцев</span>
             </button>
-            <button class="subscriptions__tabs-button" type="button">
+            <button class="subscriptions__tabs-button" type="button" data-subscription="tab-12months">
               <span class="subscriptions__tabs-button-text">12 месяцев</span>
             </button>
           </div>
-          <ul class="subscriptions__list">
-            <li class="subscriptions__item subscription-card">
+          <ul class="subscriptions__list" data-subscription-list>
+            <li class="subscriptions__item subscription-card" data-subscription-item>
               <h3 class="subscription-card__title">С тренером</h3>
               <p class="subscription-card__badge">12 занятий</p>
               <div class="subscription-card__price-wrapper">
-                <p class="subscription-card__price" data-title="5000">5000</p>
+                <p class="subscription-card__price" data-subscription="coach" data-title="5000">5000</p>
                 <picture>
                   <source type="image/svg+xml" media="(max-width: 767px)" srcset="img/svg/ruble-mobile.svg">
                   <img src="img/svg/ruble-desktop.svg" width="30" height="42" alt="рубль.">
@@ -134,11 +142,11 @@
                 <span class="btn__text">Купить абонемент</span>
               </a>
             </li>
-            <li class="subscriptions__item subscription-card">
+            <li class="subscriptions__item subscription-card is-active" data-subscription-item>
               <h3 class="subscription-card__title">Дневной</h3>
               <p class="subscription-card__badge subscription-card__badge--time">с 8:00 до 17:00</p>
               <div class="subscription-card__price-wrapper">
-                <p class="subscription-card__price" data-title="1700">1700</p>
+                <p class="subscription-card__price" data-subscription="daily" data-title="1700">1700</p>
                 <picture>
                   <source type="image/svg+xml" media="(max-width: 767px)" srcset="img/svg/ruble-mobile.svg">
                   <img src="img/svg/ruble-desktop.svg" width="30" height="42" alt="рубль.">
@@ -148,11 +156,11 @@
                 <span class="btn__text">Купить абонемент</span>
               </a>
             </li>
-            <li class="subscriptions__item subscription-card">
+            <li class="subscriptions__item subscription-card" data-subscription-item>
               <h3 class="subscription-card__title subscription-card__title--displaced">Полный день</h3>
               <p class="subscription-card__badge subscription-card__badge--time subscription-card__badge--displaced">с 8:00 до 22:00</p>
               <div class="subscription-card__price-wrapper">
-                <p class="subscription-card__price" data-title="2700">2700</p>
+                <p class="subscription-card__price" data-subscription="full" data-title="2700">2700</p>
                 <picture>
                   <source type="image/svg+xml" media="(max-width: 767px)" srcset="img/svg/ruble-mobile.svg">
                   <img src="img/svg/ruble-desktop.svg" width="30" height="42" alt="рубль.">
@@ -177,7 +185,7 @@
           </div>
         </div>
        </section>
-       <section class="competition">
+       <section class="competition" data-test="games">
         <h2 class="visually-hidden">Соревнования в Supergym</h2>
         <div class="container">
           <div class="competition__banner-wrapper competition-banner">
@@ -464,7 +472,7 @@
           </div>
         </div>
        </section>
-       <section class="advantages">
+       <section class="advantages" data-test="features">
         <div class="advantages__container container">
           <h2 class="advantages__title">Наши преимущества</h2>
           <ul class="advantages__list">
@@ -519,7 +527,7 @@
           </ul>
         </div>
        </section>
-       <section class="promotions">
+       <section class="promotions" data-test="offers">
         <div class="container">
           <h2 class="promotions__title">Акции</h2>
           <ul class="promotions__list">
@@ -562,7 +570,7 @@
           </ul>
         </div>
        </section>
-       <section class="faq">
+       <section class="faq" data-test="faq">
         <div class="container">
           <h2 class="faq__title">Вопросы и ответы</h2>
           <div class="faq__content-wrapper" data-tabs="parent">
@@ -749,7 +757,7 @@
           </div>
         </div>
        </section>
-       <section class="feedback">
+       <section class="feedback" data-test="reviews">
         <div class="container">
           <h2 class="feedback__title">Отзывы</h2>
           <div class="feedback__slider-wrapper">
@@ -812,21 +820,21 @@
         </div>
        </section>
       </main>
-      <footer class="footer">
+      <footer class="footer" data-test="footer">
         <div class="footer__contacts-wrapper">
           <div class="footer__contacts-container container">
             <section class="client-contacts">
               <h2 class="client-contacts__title">Бесплатное занятие</h2>
-              <form action="https://echo.htmlacademy.ru" method="post">
-                <label>
+              <form action="https://echo.htmlacademy.ru" method="post" data-form>
+                <label data-on-input-validate>
                   <span class="visually-hidden">Ваше имя</span>
-                  <input type="text" name="name" required placeholder="Имя">
+                  <input type="text" name="name" required placeholder="Имя" data-form-name>
                 </label>
-                <label>
+                <label data-on-input-validate>
                   <span class="visually-hidden">Ваш телефон</span>
-                  <input type="tel" name="phone" required placeholder="Телефон">
+                  <input type="tel" name="phone" required placeholder="Телефон" data-form-tel>
                 </label>
-                <button class="client-contacts__button btn btn--dark-background" type="submit">
+                <button class="client-contacts__button btn btn--dark-background" type="submit" data-form-button>
                   <span class="client-contacts__button-text btn__text">отправить</span>
                 </button>
               </form>
