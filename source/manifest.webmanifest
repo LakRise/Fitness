@@ -1,6 +1,16 @@
 {
   "icons": [
     {
+      "src": "img/favicons/favicon-32x32.webp",
+      "type": "image/webp",
+      "sizes": "32x32"
+    },
+    {
+      "src": "img/favicons/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
       "src": "img/favicons/android-icon-192x192.webp",
       "type": "image/webp",
       "sizes": "192x192"

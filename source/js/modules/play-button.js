@@ -10,6 +10,9 @@ const onButtonClick = () => {
 };
 
 const setVideo = () => {
+  if (videoButton === null || video === null) {
+    return;
+  }
   videoButton.addEventListener('click', onButtonClick);
 };
 

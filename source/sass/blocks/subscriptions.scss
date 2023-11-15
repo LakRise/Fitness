@@ -2,7 +2,7 @@
 @use "../mixins.scss" as *;
 
 .subscriptions {
-  padding: 126px 0 120px;
+  padding: 126px 0 119px;
   background-color: variables.$color-default-grey;
 
   @media (max-width: variables.$vp-1365) {
@@ -84,24 +84,21 @@
   color: rgba(16, 38, 84, 0.5);
   cursor: pointer;
 
-  &--active {
-    color: variables.$color-default-blue;
-
-    &::before {
-      position: absolute;
-      top: calc(100% - 2px);
-      left: 6px;
-      width: calc(100% - 11px);
-      height: 2px;
-      background-color: #d10a42;
-      content: "";
-    }
+  &::before {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 6px;
+    display: none;
+    width: calc(100% - 11px);
+    height: 2px;
+    background-color: #d10a42;
+    content: "";
   }
 
   @media (max-width: variables.$vp-1365) {
     padding-bottom: 13px;
 
-    &--active::before {
+    &::before {
       left: 5px;
       width: calc(100% - 9px);
     }
@@ -110,7 +107,7 @@
   @media (max-width: variables.$vp-767) {
     padding: 0 0 16px;
 
-    &--active::before {
+    &::before {
       left: 0;
       width: 100%;
     }
@@ -120,13 +117,7 @@
     color: variables.$color-default-blue;
 
     &::before {
-      position: absolute;
-      top: calc(100% - 2px);
-      left: 6px;
-      width: calc(100% - 11px);
-      height: 2px;
-      background-color: #d10a42;
-      content: "";
+      display: block;
     }
   }
 
@@ -134,18 +125,26 @@
     color: variables.$color-default-blue;
 
     &::before {
-      position: absolute;
-      top: calc(100% - 2px);
-      left: 6px;
-      width: calc(100% - 11px);
-      height: 2px;
-      background-color: #d10a42;
-      content: "";
+      display: block;
     }
   }
 
   &:disabled {
     opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.subscriptions__tabs-button.is-active {
+  color: variables.$color-default-blue;
+
+  &::before {
+    display: block;
   }
 }
 

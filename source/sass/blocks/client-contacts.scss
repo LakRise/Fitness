@@ -5,7 +5,7 @@
   position: relative;
   z-index: 2;
   margin: 0 0 0 -103px;
-  padding: 60px 170px 59px 103px;
+  padding: 60px 170px 58px 103px;
   background: variables.$color-default-blue;
 
   &::before {
@@ -37,23 +37,28 @@
   color: variables.$color-default-white;
 
   @media (max-width: variables.$vp-1365) {
-    margin-bottom: 25px;
+    margin: 0 auto 26px;
+    max-width: 700px;
   }
 
   @media (max-width: variables.$vp-767) {
     margin-bottom: 31px;
+    max-width: 500px;
   }
 }
 
 .client-contacts form {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
-  row-gap: 28px;
+  row-gap: 27px;
 
   @media (max-width: variables.$vp-1365) {
+    margin: 0 auto;
     column-gap: 60px;
-    row-gap: 29px;
+    row-gap: 28px;
+    max-width: 700px;
   }
 
   @media (max-width: variables.$vp-767) {
@@ -61,11 +66,20 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 26px;
+    max-width: 500px;
   }
 }
 
+.client-contacts__label-wrapper {
+  position: relative;
+}
+
+.client-contacts__label-wrapper.is-invalid input {
+  border-color: #ff121f;
+}
+
 .client-contacts input {
-  padding: 11px 6px 2px 5px;
+  padding: 11px 6px 3px 5px;
   width: 100%;
   font-family: variables.$ff-placeholder;
   font-size: 14px;
@@ -139,5 +153,37 @@
 
   @media (max-width: variables.$vp-1365) {
     transform: translate(0);
+  }
+}
+
+.client-contacts__error-message {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  margin: 0 -15px 0 0;
+  max-width: calc(100% + 15px);
+  height: 22px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: #ff121f;
+  overflow: hidden;
+
+  @media (max-width: variables.$vp-767) {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+.client-contacts__message {
+  position: absolute;
+  left: 32%;
+  bottom: -30px;
+  margin: 0;
+  color: variables.$color-default-white;
+
+  @media (max-width: variables.$vp-767) {
+    left: 25%;
   }
 }

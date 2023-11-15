@@ -25,7 +25,8 @@ const Prices = {
 const onTabClick = (evt) => {
   if (!evt.target.closest('[data-subscription="tab-1month"]')
     && !evt.target.closest('[data-subscription="tab-6months"]')
-    && !evt.target.closest('[data-subscription="tab-12months"]')) {
+    && !evt.target.closest('[data-subscription="tab-12months"]')
+    || evt.target.closest('.is-active')) {
     return;
   }
   let activeTab = '';
@@ -38,17 +39,22 @@ const onTabClick = (evt) => {
   if (evt.target.closest('[data-subscription="tab-12months"]')) {
     activeTab = 'tab-12months';
   }
-  const { COACH, DAILY, FULL } = Prices[activeTab];
+  const {COACH, DAILY, FULL} = Prices[activeTab];
   coachPrice.innerHTML = COACH;
   coachPrice.setAttribute('data-title', COACH.toString());
   dailyPrice.innerHTML = DAILY;
   dailyPrice.setAttribute('data-title', DAILY.toString());
   fullPrice.innerHTML = FULL;
   fullPrice.setAttribute('data-title', FULL.toString());
+  tabs.querySelector('.is-active').classList.remove('is-active');
+  evt.target.closest('[data-subscription-tab]').classList.add('is-active');
 };
 
 const setSubscriptionTabs = () => {
+  if (tabs === null) {
+    return;
+  }
   tabs.addEventListener('click', onTabClick);
 };
 
-setSubscriptionTabs();
+export {setSubscriptionTabs};

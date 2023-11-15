@@ -1,6 +1,9 @@
 const jury = document.querySelector('[data-swiper="jury"]');
 
 const setSwiperJury = () => {
+  if (jury === null) {
+    return;
+  }
   const swiperJury = new Swiper(jury, {
     direction: 'horizontal',
     loop: true,
@@ -11,11 +14,14 @@ const setSwiperJury = () => {
     breakpoints: {
       320: {
         spaceBetween: 20,
+        initialSlide: 2,
       },
       768: {
         spaceBetween: 32,
+        initialSlide: 2,
       },
       1366: {
+        initialSlide: 0,
         spaceBetween: 40,
       },
     },

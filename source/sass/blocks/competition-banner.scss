@@ -9,11 +9,13 @@
 
   @media (max-width: variables.$vp-1365) {
     margin: 0 auto 101px;
+    justify-content: center;
   }
 
   @media (max-width: variables.$vp-767) {
-    margin-bottom: 71px;
+    margin-bottom: 73px;
     flex-direction: column;
+    max-width: 500px;
   }
 }
 
@@ -57,6 +59,7 @@
   line-height: 76px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  overflow: hidden;
 
   @media (max-width: variables.$vp-1365) {
     transform: translate(0);
@@ -147,6 +150,7 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 40px;
+  overflow: hidden;
 
   @media (max-width: variables.$vp-1365) {
     font-size: 24px;
@@ -205,6 +209,14 @@
   }
 }
 
+.competition-banner__picture-wrapper {
+  @media (max-width: variables.$vp-767) {
+    position: relative;
+    padding-top: 100%;
+    width: 100%;
+  }
+}
+
 .competition-banner__picture-wrapper img {
   @media (max-width: variables.$vp-1365) {
     width: 386px;
@@ -212,7 +224,12 @@
   }
 
   @media (max-width: variables.$vp-767) {
-    width: 290px;
-    height: 292px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 290px;
+    min-height: 292px;
+    width: 100%;
+    height: 100%;
   }
 }

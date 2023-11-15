@@ -1,6 +1,9 @@
 const feedback = document.querySelector('[data-swiper="feedback"]');
 
 const setSwiperFeedback = () => {
+  if (feedback === null) {
+    return;
+  }
   const swiperFeedback = new Swiper(feedback, {
     direction: 'horizontal',
     loop: false,

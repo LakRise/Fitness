@@ -11,7 +11,7 @@
   }
 
   @media (max-width: variables.$vp-767) {
-    padding: 71px 0 64px;
+    padding: 71px 0 49px;
   }
 }
 
@@ -28,11 +28,10 @@
   text-align: center;
 
   @media (max-width: variables.$vp-1365) {
-    margin-bottom: 49px;
+    margin-bottom: 50px;
   }
 
   @media (max-width: variables.$vp-767) {
-    transform: translateX(2px);
     margin-bottom: 54px;
     max-width: 79%;
   }
@@ -63,7 +62,7 @@
   }
 
   @media (max-width: variables.$vp-767) {
-    padding: 0 30px 0 34px;
+    padding: 0 30px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -104,14 +103,6 @@
     align-items: center;
     gap: 0;
     width: 100%;
-
-    &--displaced {
-      transform: translateX(-1px);
-    }
-
-    &--displaced-2 {
-      transform: translateY(-5px);
-    }
   }
 }
 
@@ -157,10 +148,6 @@
   @media (max-width: variables.$vp-767) {
     margin-bottom: 13px;
     font-size: 18px;
-
-    &--alt-margin {
-      margin-bottom: 7px;
-    }
   }
 }
 
@@ -194,10 +181,6 @@
       display: inline;
     }
 
-    &--displaced {
-      transform: translateY(-6px);
-    }
-
     &--special {
       width: 64%;
       font-weight: 300;
@@ -217,6 +200,10 @@
   justify-content: flex-start;
   align-items: flex-start;
 
+  @media (max-width: variables.$vp-1365) {
+    transform: translateY(-1px);
+  }
+
   @media (max-width: variables.$vp-767) {
     margin-bottom: 12px;
     align-items: center;
@@ -227,7 +214,9 @@
   @include badge-number;
 
   margin: 0;
+  max-width: 110px;
   -webkit-text-fill-color: transparent;
+  overflow: hidden;
 
   &--color-1 {
     background: linear-gradient(128deg, #d10a42 0%, #0041ca 45.58%);
@@ -261,7 +250,7 @@
 
   @media (max-width: variables.$vp-767) {
     &--special {
-      margin-bottom: 6px;
+      margin-bottom: 7px;
     }
   }
 }
@@ -272,6 +261,10 @@
   font-weight: 400;
   line-height: 22px;
   color: #2e35ac;
+
+  @media (max-width: variables.$vp-1365) {
+    transform: translateY(2px);
+  }
 
   @media (max-width: variables.$vp-767) {
     line-height: 20px;
@@ -288,7 +281,7 @@
 .advantages__special-item {
   transform: translateY(4px);
   margin: 0;
-  padding: 70px 34px 79px;
+  padding: 70px 34px 78px;
   grid-column: 2;
   grid-area: s;
   display: flex;
@@ -306,9 +299,8 @@
   }
 
   @media (max-width: variables.$vp-767) {
-    transform: translateY(-4px);
-    margin: 0 0 2px calc(-50vw + 50% - 2px);
-    padding: 30px 74px 34px 29px;
+    margin: 5px 0 6px calc(-50vw + 50% - 2px);
+    padding: 29px 70px 34px 29px;
     width: calc(100vw + 45px);
   }
 }

@@ -2,9 +2,9 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {setSwiperJury} from './modules/swiper-jury.js';
 import {setSwiperFeedback} from './modules/swiper-feedback.js';
 import {setVideo} from './modules/play-button.js';
-import './modules/subscription-tabs.js';
-import './modules/form-validate.js';
-import { setPriceSelect } from './modules/price-select.js';
+import {setSubscriptionTabs} from './modules/subscription-tabs.js';
+import {setFormValidate} from './modules/form-validate.js';
+import {setPriceSelect} from './modules/price-select.js';
 
 // ---------------------------------
 
@@ -18,9 +18,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   setVideo();
+  setSubscriptionTabs();
   setPriceSelect();
   setSwiperJury();
   setSwiperFeedback();
+  setFormValidate();
 });
 
 // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

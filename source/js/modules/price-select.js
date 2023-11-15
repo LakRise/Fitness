@@ -1,6 +1,9 @@
 const list = document.querySelector('[data-subscription-list]');
 
 const setPriceSelect = () => {
+  if (list === null) {
+    return;
+  }
   list.addEventListener('click', (evt) => {
     const target = evt.target.closest('[data-subscription-item]');
     if (!target || target.classList.contains('is-active')) {

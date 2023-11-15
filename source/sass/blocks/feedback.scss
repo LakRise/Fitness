@@ -2,7 +2,7 @@
 @use "../mixins.scss" as *;
 
 .feedback {
-  padding: 118px 0;
+  padding: 119px 0 121px;
 
   @media (max-width: variables.$vp-1365) {
     padding: 101px 0 100px;
@@ -43,6 +43,7 @@
     margin: 0 auto;
     padding: 0 32px;
     width: 100%;
+    max-width: 500px;
   }
 }
 
