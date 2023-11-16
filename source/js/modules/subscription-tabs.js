@@ -6,19 +6,19 @@ const fullPrice = container.querySelector('[data-subscription="full"]');
 
 const Prices = {
   'tab-1month': {
-    COACH: 5000,
-    DAILY: 1700,
-    FULL: 2700,
+    coach: 5000,
+    daily: 1700,
+    full: 2700,
   },
   'tab-6months': {
-    COACH: 30000,
-    DAILY: 10200,
-    FULL: 16200,
+    coach: 30000,
+    daily: 10200,
+    full: 16200,
   },
   'tab-12months': {
-    COACH: 60000,
-    DAILY: 20400,
-    FULL: 32400,
+    coach: 60000,
+    daily: 20400,
+    full: 32400,
   },
 };
 
@@ -39,15 +39,15 @@ const onTabClick = (evt) => {
   if (evt.target.closest('[data-subscription="tab-12months"]')) {
     activeTab = 'tab-12months';
   }
-  const {COACH, DAILY, FULL} = Prices[activeTab];
-  coachPrice.innerHTML = COACH;
-  coachPrice.setAttribute('data-title', COACH.toString());
-  dailyPrice.innerHTML = DAILY;
-  dailyPrice.setAttribute('data-title', DAILY.toString());
-  fullPrice.innerHTML = FULL;
-  fullPrice.setAttribute('data-title', FULL.toString());
+  const {coach, daily, full} = Prices[activeTab];
+  coachPrice.innerHTML = coach;
+  coachPrice.setAttribute('data-title', coach.toString());
+  dailyPrice.innerHTML = daily;
+  dailyPrice.setAttribute('data-title', daily.toString());
+  fullPrice.innerHTML = full;
+  fullPrice.setAttribute('data-title', full.toString());
   tabs.querySelector('.is-active').classList.remove('is-active');
-  evt.target.closest('[data-subscription-tab]').classList.add('is-active');
+  evt.target.closest('[data-tab="tab"]').classList.add('is-active');
 };
 
 const setSubscriptionTabs = () => {

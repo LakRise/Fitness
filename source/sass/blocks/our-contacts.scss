@@ -2,7 +2,9 @@
 @use "../mixins.scss" as *;
 
 .our-contacts {
-  padding: 61px 0 60px 120px;
+  position: relative;
+  z-index: 2;
+  padding: 61px 0 61px 120px;
 
   @media (max-width: variables.$vp-1365) {
     padding: 105px 88px 99px;
@@ -15,6 +17,7 @@
 
 .our-contacts__title {
   @include section-title;
+
   margin: 0 0 41px;
 
   @media (max-width: variables.$vp-1365) {

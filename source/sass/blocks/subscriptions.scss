@@ -2,7 +2,7 @@
 @use "../mixins.scss" as *;
 
 .subscriptions {
-  padding: 126px 0 119px;
+  padding: 126px 0 120px;
   background-color: variables.$color-default-grey;
 
   @media (max-width: variables.$vp-1365) {
@@ -12,6 +12,7 @@
   @media (max-width: variables.$vp-767) {
     padding: 74px 0 70px;
   }
+
   overflow-x: clip;
   overflow-y: visible;
 }

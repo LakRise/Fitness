@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Supergym - фитнес центр в Омске.">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="fonts/AlumniSans-SemiBold.woff2">
-    <link rel="stylesheet" href="fonts/AlumniSans-ExtraBold.woff2">
-    <link rel="stylesheet" href="fonts/RobotoCondensed-Bold.woff2">
-    <link rel="stylesheet" href="fonts/RobotoCondensed-Regular.woff2">
-    <link rel="stylesheet" href="fonts/RobotoCondensed-Light.woff2">
+    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/AlumniSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <title>Fitness</title>
   </head>
   <body>
@@ -106,7 +106,7 @@
                   <img src="img/video-overlay-desktop-1x.png" srcset="img/video-overlay-desktop-2x.png 2x" width="364" height="228"
                   alt="">
                 </picture>
-                <iframe class="promo__video" src="https://www.youtube.com/embed/9TZXsZItgdw" width="364" height="228"
+                <iframe class="promo__video" src="https://www.youtube.com/embed/9TZXsZItgdw" title="video" width="364" height="228"
                 loading="lazy" tabindex="-1" data-video="video"></iframe>
                 <button class="promo__video-button" type="button" data-video="play-button">
                   <svg aria-hidden="true" focusable="false" width="13" height="15" fill="currentColor">
@@ -122,18 +122,18 @@
           <div class="subscriptions__container container" data-subscription="container">
             <h2 class="subscriptions__title">Абонементы</h2>
             <div class="subscriptions__tabs" data-subscription="tabs">
-              <button class="subscriptions__tabs-button is-active" type="button" data-subscription-tab data-subscription="tab-1month">
+              <button class="subscriptions__tabs-button is-active" type="button" data-tab="tab" data-subscription="tab-1month">
                 <span class="subscriptions__tabs-button-text">1 месяц</span>
               </button>
-              <button class="subscriptions__tabs-button" type="button" data-subscription-tab data-subscription="tab-6months">
+              <button class="subscriptions__tabs-button" type="button" data-tab="tab" data-subscription="tab-6months">
                 <span class="subscriptions__tabs-button-text">6 месяцев</span>
               </button>
-              <button class="subscriptions__tabs-button" type="button" data-subscription-tab data-subscription="tab-12months">
+              <button class="subscriptions__tabs-button" type="button" data-tab="tab" data-subscription="tab-12months">
                 <span class="subscriptions__tabs-button-text">12 месяцев</span>
               </button>
             </div>
-            <ul class="subscriptions__list" data-subscription-list>
-              <li class="subscriptions__item subscription-card" data-subscription-item>
+            <ul class="subscriptions__list" data-subscription="list">
+              <li class="subscriptions__item subscription-card" data-subscription="item">
                 <h3 class="subscription-card__title">С тренером</h3>
                 <p class="subscription-card__badge">12 занятий</p>
                 <div class="subscription-card__price-wrapper">
@@ -147,7 +147,7 @@
                   <span class="btn__text">Купить абонемент</span>
                 </a>
               </li>
-              <li class="subscriptions__item subscription-card is-active" data-subscription-item>
+              <li class="subscriptions__item subscription-card is-active" data-subscription="item">
                 <h3 class="subscription-card__title">Дневной</h3>
                 <p class="subscription-card__badge subscription-card__badge--time">с 8:00 до 17:00</p>
                 <div class="subscription-card__price-wrapper">
@@ -161,7 +161,7 @@
                   <span class="btn__text">Купить абонемент</span>
                 </a>
               </li>
-              <li class="subscriptions__item subscription-card" data-subscription-item>
+              <li class="subscriptions__item subscription-card" data-subscription="item">
                 <h3 class="subscription-card__title subscription-card__title--displaced">Полный день</h3>
                 <p class="subscription-card__badge subscription-card__badge--time subscription-card__badge--displaced">с 8:00 до 22:00</p>
                 <div class="subscription-card__price-wrapper">
@@ -516,7 +516,7 @@
                 <div class="advantages__item-wrapper advantages__item-wrapper--displaced-2">
                   <h3 class="advantages__item-title">Комфорт</h3>
                   <p class="advantages__item-text advantages__item-text--alt-height">
-                    <span class="advantages__displaced-text">Просторные раздевалки,</span>&nbsp;<br> душевые, фен, Wi-Fi, кулеры</p>
+                    <span class="advantages__displaced-text">Просторные раздевалки,</span><br>душевые, фен, Wi-Fi, кулеры</p>
                 </div>
               </li>
               <li class="advantages__item">
@@ -569,7 +569,7 @@
               <li class="promotions__item">
                 <h3 class="promotions__item-tittle">Скидка 20%</h3>
                 <p class="promotions__text">
-                  <span class="promotions__displaced-text">Корпоративный фитнес</span> с командой</p>
+                  <span class="promotions__displaced-text">Корпоративный фитнес</span>&nbsp;с командой</p>
                 <a class="promotions__link" href="#">Подробнее</a>
               </li>
             </ul>
@@ -830,20 +830,20 @@
           <div class="footer__contacts-container container">
             <section class="client-contacts">
               <h2 class="client-contacts__title">Бесплатное занятие</h2>
-              <form action="https://echo.htmlacademy.ru" method="post" data-form>
+              <form action="https://echo.htmlacademy.ru" method="post" data-form="form">
                 <div class="client-contacts__label-wrapper" data-form-label="name">
                   <label>
                     <span class="visually-hidden">Ваше имя</span>
-                    <input type="text" name="name" required placeholder="Имя" data-form-name>
+                    <input type="text" name="name" required placeholder="Имя" data-form="name">
                   </label>
                 </div>
                 <div class="client-contacts__label-wrapper" data-form-label="tel">
                   <label>
                     <span class="visually-hidden">Ваш телефон</span>
-                    <input type="text" name="phone" required placeholder="Телефон" data-form-tel>
+                    <input type="text" name="phone" required placeholder="Телефон" data-form="tel">
                   </label>
                 </div>
-                <button class="client-contacts__button btn btn--dark-background" type="submit" data-form-button>
+                <button class="client-contacts__button btn btn--dark-background" type="submit" data-form="button">
                   <span class="client-contacts__button-text btn__text">Отправить</span>
                 </button>
               </form>

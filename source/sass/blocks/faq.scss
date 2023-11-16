@@ -6,7 +6,7 @@
   background: variables.$color-default-grey;
 
   @media (max-width: variables.$vp-1365) {
-    padding: 101px 0;
+    padding: 101px 0 100px;
   }
 
   @media (max-width: variables.$vp-767) {
@@ -16,6 +16,7 @@
 
 .faq__title {
   @include section-title;
+
   margin: 0 0 50px;
   max-width: 80%;
 
@@ -39,7 +40,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-
     gap: 39px;
   }
 

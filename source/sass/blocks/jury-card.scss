@@ -27,6 +27,12 @@
     }
   }
 
+  &:active {
+    &::before {
+      display: none;
+    }
+  }
+
   @media (max-width: variables.$vp-1365) {
     transform: translateX(1px);
     width: 268px;
@@ -105,12 +111,16 @@
 }
 
 .jury-card:active .jury-card__badge {
+  display: none;
+
   @media (max-width: variables.$vp-1365) {
     display: block;
   }
 }
 
 .jury-card:active .jury-card__list {
+  display: none;
+
   @media (max-width: variables.$vp-1365) {
     display: flex;
   }

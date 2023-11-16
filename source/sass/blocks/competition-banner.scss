@@ -31,7 +31,7 @@
   color: variables.$color-default-white;
 
   @media (max-width: variables.$vp-1365) {
-    padding: 40px 45px 45px 45px;
+    padding: 40px 45px 45px;
     column-gap: 40px;
     min-height: 324px;
     max-width: 43%;

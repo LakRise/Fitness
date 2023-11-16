@@ -1,14 +1,12 @@
-const form = document.querySelector('[data-form]');
-const nameInput = form.querySelector('[data-form-name]');
-const telInput = form.querySelector('[data-form-tel]');
+const form = document.querySelector('[data-form="form"]');
+const nameInput = form.querySelector('[data-form="name"]');
+const telInput = form.querySelector('[data-form="tel"]');
 const labelName = form.querySelector('[data-form-label="name"');
 const labelTel = form.querySelector('[data-form-label="tel"');
+const submitButton = form.querySelector('[data-form="button"]');
 
 const expressionName = /^[a-zA-Zа-яёА-ЯЁ]+( [a-zA-Zа-яёА-ЯЁ]+)*$/;
-const expressionTel = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-
-nameInput.removeAttribute('required');
-telInput.removeAttribute('required');
+const expressionTel = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im;
 
 const createMessage = (message) => {
   if (form.querySelector('.client-contacts__message') === null) {
@@ -16,7 +14,9 @@ const createMessage = (message) => {
     element.className = 'client-contacts__message';
     element.innerHTML = message;
     form.append(element);
-    setTimeout(() => { element.remove() }, 3000);
+    setTimeout(() => {
+      element.remove();
+    }, 3000);
   }
 };
 
@@ -28,6 +28,12 @@ const createErrorMessage = (input, expression, errorMessage, label) => {
     message = errorMessage;
   }
   if (label.querySelector('.client-contacts__error-message') === null) {
+    const element = document.createElement('p');
+    element.className = 'client-contacts__error-message';
+    element.innerHTML = message;
+    label.append(element);
+  } else if (label.querySelector('.client-contacts__error-message').value !== message) {
+    label.querySelector('.client-contacts__error-message').remove();
     const element = document.createElement('p');
     element.className = 'client-contacts__error-message';
     element.innerHTML = message;
@@ -61,9 +67,6 @@ const validateName = () => {
   return found;
 };
 
-//const nameArray = nameInput.value.split(' ');
-//const filteredName = nameArray.filter((element) => element !== '');
-
 const validateTel = () => {
   const found = validateItem(telInput, expressionTel, 'Неверный номер.', labelTel);
   return found;
@@ -71,21 +74,22 @@ const validateTel = () => {
 
 const sendData = (url, method = 'post', body = null) =>
   fetch(url, {method, body})
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error();
-        }
-      })
-      .catch(() => {
-        throw new Error('server error');
-      });
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error();
+      }
+    })
+    .catch(() => {
+      throw new Error();
+    });
 
 const sendForm = (async (data) => {
+  submitButton.setAttribute('disabled', '');
   try {
     await sendData('https://echo.htmlacademy.ru', 'post', data);
     createMessage('Ваши данные получены.');
-  } catch {
-    createMessage('Ошибка сервера.');
+  } finally {
+    submitButton.removeAttribute('disabled');
   }
 });
 
@@ -93,6 +97,8 @@ const setFormValidate = () => {
   if (form === null) {
     return;
   }
+  nameInput.removeAttribute('required');
+  telInput.removeAttribute('required');
   form.addEventListener('submit', (evt) => {
     evt.preventDefault();
     validateName();
@@ -102,6 +108,6 @@ const setFormValidate = () => {
       sendForm(formData);
     }
   });
-}
+};
 
 export {setFormValidate};
