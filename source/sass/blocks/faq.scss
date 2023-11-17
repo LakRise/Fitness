@@ -106,6 +106,7 @@
   }
 
   @include hover-focus {
+    outline-style: none;
     box-shadow: 1px 1px variables.$color-default-blue inset, -1px -1px variables.$color-default-blue inset;
   }
 
@@ -124,6 +125,13 @@
   &:disabled {
     box-shadow: 1px 1px rgba(16, 38, 84, 0.2) inset, -1px -1px rgba(16, 38, 84, 0.2) inset;
     color: #c8c9cc;
+    pointer-events: none;
+  }
+
+  &--disabled {
+    box-shadow: 1px 1px rgba(16, 38, 84, 0.2) inset, -1px -1px rgba(16, 38, 84, 0.2) inset;
+    color: #c8c9cc;
+    pointer-events: none;
   }
 }
 
@@ -131,8 +139,10 @@
   box-shadow: none;
   background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
   color: variables.$color-default-white;
+  pointer-events: none;
 
   @include hover-focus {
+    outline-style: auto;
     box-shadow: none;
   }
 }

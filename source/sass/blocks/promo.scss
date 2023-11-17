@@ -166,13 +166,13 @@
 .promo__video-container {
   position: relative;
   margin: 288px auto 0 0;
-  min-width: 364px;
-  min-height: 228px;
+  width: 364px;
+  height: 228px;
 
   @media (max-width: variables.$vp-1365) {
     margin: calc(38% + 3px) auto 0 auto;
-    min-width: 266px;
-    min-height: 167px;
+    width: 266px;
+    height: 167px;
   }
 
   @media (max-width: variables.$vp-767) {
@@ -181,6 +181,7 @@
     min-width: 320px;
     min-height: 167px;
     width: 100%;
+    height: auto;
   }
 }
 
@@ -247,6 +248,7 @@
   border: 2px solid rgba(237, 2, 51, 0.2);
   border-radius: 100px;
   transition: all 0.2s ease;
+  cursor: pointer;
 
   &::before {
     width: 72px;

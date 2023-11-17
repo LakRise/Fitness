@@ -1,10 +1,10 @@
 const feedback = document.querySelector('[data-swiper="feedback"]');
 
-const setSwiperFeedback = () => {
+function setSwiperFeedback() {
   if (feedback === null) {
     return;
   }
-  const swiperFeedback = new Swiper(feedback, {
+  const swiperFeedback = new window.Swiper(feedback, {
     direction: 'horizontal',
     loop: false,
     slidesPerView: '1',
@@ -21,6 +21,6 @@ const setSwiperFeedback = () => {
       prevEl: '[data-feedback-button="left"]',
     },
   });
-};
+}
 
 export {setSwiperFeedback};

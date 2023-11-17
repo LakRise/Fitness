@@ -25,16 +25,17 @@
   grid-template-columns: auto auto;
   justify-content: start;
   align-content: start;
-  column-gap: 69px;
+  column-gap: 68px;
   min-height: 500px;
   background: #ed0233;
   color: variables.$color-default-white;
 
   @media (max-width: variables.$vp-1365) {
     padding: 40px 45px 45px;
+    grid-template-columns: 106px auto;
     column-gap: 40px;
     min-height: 324px;
-    max-width: 43%;
+    max-width: 292px;
   }
 
   @media (max-width: variables.$vp-767) {
@@ -51,28 +52,36 @@
   transform: translateY(1px);
   margin: 0;
   padding: 0;
-  width: min-content;
   height: fit-content;
+  max-width: 180px;
   font-family: variables.$ff-secondary;
   font-size: 82px;
   font-weight: 600;
   line-height: 76px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  word-break: break-word;
   overflow: hidden;
 
   @media (max-width: variables.$vp-1365) {
     transform: translate(0);
+    max-width: 106px;
     font-size: 48px;
     line-height: 46px;
+  }
+
+  @media (max-width: variables.$vp-767) {
+    max-width: 117px;
   }
 }
 
 .competition-banner__info {
   margin: 0 0 21px;
   height: fit-content;
+  max-width: 92px;
 
   @media (max-width: variables.$vp-1365) {
+    max-width: 56px;
     margin-bottom: 3px;
   }
 
@@ -146,11 +155,11 @@
 .competition-banner__info-number {
   margin: 0;
   grid-row: 1/-1;
-  width: min-content;
   font-size: 40px;
   font-weight: 700;
   line-height: 40px;
   overflow: hidden;
+  word-break: break-word;
 
   @media (max-width: variables.$vp-1365) {
     font-size: 24px;
@@ -165,9 +174,11 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  max-width: 37px;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
+  word-break: break-word;
 
   @media (max-width: variables.$vp-1365) {
     padding: 2px 0 0;
@@ -210,10 +221,17 @@
 }
 
 .competition-banner__picture-wrapper {
+  min-width: 660px;
+
+  @media (max-width: variables.$vp-1365) {
+    min-width: 386px;
+  }
+
   @media (max-width: variables.$vp-767) {
     position: relative;
     padding-top: 100%;
     width: 100%;
+    min-width: 290px;
   }
 }
 

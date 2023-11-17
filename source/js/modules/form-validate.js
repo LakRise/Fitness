@@ -88,6 +88,8 @@ const sendForm = (async (data) => {
   try {
     await sendData('https://echo.htmlacademy.ru', 'post', data);
     createMessage('Ваши данные получены.');
+  } catch {
+    createMessage('Ошибка сервера');
   } finally {
     submitButton.removeAttribute('disabled');
   }

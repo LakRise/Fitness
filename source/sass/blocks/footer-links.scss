@@ -284,6 +284,10 @@
   &:disabled {
     opacity: 0.3;
   }
+
+  &--disabled {
+    opacity: 0.3;
+  }
 }
 
 .footer-links__social-link--vk svg {

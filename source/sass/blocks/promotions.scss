@@ -216,6 +216,16 @@
     border-color: transparent;
   }
 
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   &--special {
     @include focus {
       border-color: variables.$color-default-white;

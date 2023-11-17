@@ -4,7 +4,7 @@ const setSwiperJury = () => {
   if (jury === null) {
     return;
   }
-  const swiperJury = new Swiper(jury, {
+  const swiperJury = new window.Swiper(jury, {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 'auto',
@@ -15,14 +15,17 @@ const setSwiperJury = () => {
       320: {
         spaceBetween: 20,
         initialSlide: 2,
+        allowTouchMove: true,
       },
       768: {
         spaceBetween: 32,
         initialSlide: 2,
+        allowTouchMove: true,
       },
       1366: {
         initialSlide: 0,
         spaceBetween: 40,
+        allowTouchMove: false,
       },
     },
     navigation: {
